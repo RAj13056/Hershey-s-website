@@ -1,0 +1,438 @@
+/* IMPORTING 4 DIFFERENT FONT STYLES FROM GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+/*SETTING THE PADDING AND THE MARGIN TO 0 UNIVERSALLY, WJHICH WILL BE APPLIED TO THE WHOLE WEBPAGE BY DEFUALT UNLESS ANY CHANGES ARE MADE BY THE USER*/
+    padding: 0;
+    margin:0;
+}
+/*STYLING THE HEADER OF THE WEBPADE WHICH INCLUDES THE LOGO,NAVBAR,NAVBAR CONTENT,THE CONTENT OF THE DROPDOWN MENU AND SETTINGTHE HEIGHT 
+AND WIDTH OF THE LOGO TO MAKE THE HEADER LOOK MORE APPEALING*/
+header{
+    height: 200px;
+    width:100%;
+    
+}
+/*USING FLEX PROPERTIES IN ORDER TO STYLE THE HEADER*/
+.hersheyslogo{
+    display: flex;
+    justify-content: center;
+}
+.logo1{
+    align-items: center;
+    margin-bottom: 70px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    height : 200px;
+    float : left;
+}
+
+.logo1 img{
+    height : 100%;
+    width : auto;
+}
+
+.navbarContent{
+    width : 70%;
+    float:right;
+    height:200px;
+    display: flex;
+    align-items: center;
+}
+/*SPACING ALL THE NAV ITEMS EVENLY IN THE NAVBAR AND SETTING A BACKGROUNG COLOR TO IT BY MAKING IT A FLEX CONTAINER*/
+.menu{
+    display :flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:70px;
+    background-color: #3f000b;
+    width: 80%;
+    margin-top : 20px;
+}
+/*ADDING A DIFFERENT FONT FOR THE NAV ITEMS AND GIVING THEM A SEPERATE COLUR TO CONTRAST IT WITH THE BG-COLOR*/
+.menu .nav-item p{
+    font-size : 19px;
+    color :#feebd0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+/*USING THE SAME FONT STLE FOR THE DROPDOWN CONTENT AND FLEX PROPERTIES WILL NOT BE APPLIEAS TO THIS DIV CLASS AS DISPLAY IS SET TO NONE*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: 1px solid #ddd;
+    font-family: "Montserrat", sans-serif;
+}
+.dropdown-content a {
+    
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+/*WHEN THE DROPDOWN MENU IS HOVERED AROUND WITH CURSOR, THE BACKGROUND COLOR WILL CHANGE TO THE ONE SET BELOW*/
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Logo container styling */
+.imgContainer {
+    height: 120px;
+}
+
+.imgContainer img {
+    height: 100%;
+    width: auto;
+}
+
+/* STYLING FOR THE HEADER CONTENT*/
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+/*STYLING THE NAVBAR ITEMS AND THE CONTENT PRESENT IN IT 
+.navbarItems{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.navbarItems p {
+    margin: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    color : #917236;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    margin-bottom : 10px;
+}
+
+.navbar p {
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+}
+
+.nav-item {
+    position: relative;
+    color : #917236;
+}
+
+.nav-item p {
+    margin: 0;
+    padding: 0px 10px;
+}
+
+/* STYLING THE NAVBAR DROPDOWN*/
+.nav-item .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: beige;
+    box-shadow: 0px 8px 16px 0px rgba(216, 231, 4, 0.2);
+    padding: 10px;
+    z-index: 1;
+    min-width: 900px;
+    border: 1px solid #ddd;
+}
+
+.nav-item .dropdown-content a {
+    color: beige;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-item .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* WHEN THE NAVBAR IS HOVERED, THE DROPDOWN CONTENT WILL BE DISPLAYED*/
+.nav-item:hover .dropdown-content {
+    display: block;
+}
+
+nav{
+    display : flex;
+    justify-content: end;
+    align-items: end;
+}
+/*STYLING THE MAIN SECTION OF THE WEBPAGE*/
+main section{
+    height : 450px;
+    width : 100%;
+    background-color : #cb77cb;
+    display : flex;
+    justify-content: center;
+}
+
+.mainContent{
+    height : 450px;
+    width : 36%;
+    padding : 60px 80px;
+}
+/*STYLING THE CONTENT PRESENT IN THE MAIN*/
+.mainContent h1{
+    font-size: 50px;
+    color : white;
+    letter-spacing: 1px;
+    font-family: "Sour Gummy", sans-serif;
+    
+    font-weight : 400;
+}
+
+.mainContent p{
+    font-size: 20px;
+    color : white;
+    margin-top : 10px;
+    font-family: "Host Grotesk", sans-serif;
+}
+/*STYLING THE IMAGE IN THE MAIN*/
+.mainImg{
+    height : 450px;
+    width : 64%;
+}
+
+.mainImg img{
+    height : 100%;
+    width : 100%;
+}
+/*STYLING THE BUTTON PRESENT BELOW THE CONTENT*/
+.btnContainer{
+    margin-top : 20px;
+}
+
+
+.box-1 { 
+    background-color: #3f000b; 
+    width : 250px;
+    border-radius : 50px;
+}   
+
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+  }
+/*ALLOTING A DIFFERENT TEXT STYLE TO THE CONTENT IN THE BUTTON*/
+  .btn-one {
+    color: #feebd0;
+    transition: all 0.3s;
+    position: relative;
+    font-family: "Host Grotesk", sans-serif;
+  }
+/*STYLING THE BUTTON BEFORE IT IS HOVERED AND WHEN IT IS HOVERED TO MAKE THE WEBPAGE MORE ATTRACTIVE*/
+  .btn-one span {
+    transition: all 0.3s;
+  }
+  .btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+  }
+  .btn-one:hover span {
+    letter-spacing: 2px;
+    border-radius : 50px;
+
+  }
+  .btn-one:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+    border-radius : 50px;
+
+  }
+  .btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+    border-radius : 50px;
+
+  }
+  .btn-one:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+    border-radius : 50px;
+
+  }
+/*STYLING THE ROW CONTAINER IN WHICH THREE DIVS ARE PRESENT PARALLEL TO EACH OTHER*/
+  .rowContainer{
+    display : flex;
+    justify-content: center;
+  }
+
+  .row{
+    display : flex;
+    justify-content: space-evenly;
+    margin-top : 50px;
+    width : 80%;
+  }
+/*STYLING THE THREE IMAGES PRESENT IN THREE DIFFERENT DIVS*/
+  .box{
+    height : 400px;
+    width : 30%;
+    transform : scale(1);
+    transition : all .3s ease-in-out;
+  }
+
+  .box img{
+    height : 100%;
+    width : 100%;
+  }
+/*STYLING THE CONTENT PRESENT BELOW THE DIVS WHEN IT IS HOVERED, IT CHANGES ITS BG COLOR AS SHOWN*/
+  .box p{
+    text-decoration: underline;
+    font-size: 23px;
+    color : #b8863f;
+    margin-top : 10px;
+    font-family: "Host Grotesk", sans-serif;
+  }
+
+  .box p:hover{
+    color : #3f000b;
+    cursor : pointer;
+  }
+
+  .box:hover img{
+    transform : scale(1.05);
+    transition : 0.3s ease;
+}
+/*STYLING THE FOOTER*/
+footer{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    margin-top : 60px;
+    background-color: #feebd0;
+    padding : 40px 0;
+}
+
+.footerOutline{
+    width : 90%;
+    height : 320px;
+    display : flex;
+    justify-content: center;
+    
+}
+
+.footer{
+    height : 400px;
+    width : 25%;
+    padding : 10px;
+}
+
+.footer1{
+    height : 300px;
+    width : 25%;
+    padding : 10px;
+}
+/*STYLING THE IMG IN THE FOOTER*/
+.footer img{
+    height : 40%;
+    width : 100%;
+}
+/*STYLING THE CONTENT PRESENT IN THE FOOTER*/
+.footer ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top : 10px;
+    margin-right : 100px;
+}
+
+.footer ul li{
+    list-style: none;
+}
+
+.footer ul li a{
+    text-decoration: none;
+}
+
+.footer ul li a i{
+    font-size: 20px;
+    color :#3f000b;
+}
+
+.bullets li{
+    list-style: none;
+    margin: 25px;
+    font-size: 18px;
+    color :#3f000b;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+.bullets1 li{
+    list-style: none;
+    margin: 25px;
+    font-size: 18px;
+    color : white;
+    font-family: "Sour Gummy", sans-serif;
+}
+/*CREATING A BORDER TO THE RIGHT IN ORDER TO MAKE THE FOOTER MORE ENHANCING*/
+.b2{
+    border-right: 2px solid brown;
+}
+    
+
+/*STYLING THE LAST LINE IN THE WEBPADE WHICH IS PRESENT OUTSIDE OF THE FOOTER*/
+.copywrite{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copywrite h4{
+    color :#3f000b; 
+    margin-top : 20px;
+    font-family: "Sour Gummy", sans-serif;
+}
+.b1{
+    background-color: #3f000b;
+}
+/*THE STLING OF THE HOMEPAGE IS COMPLETED*/
+
